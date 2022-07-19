@@ -1,5 +1,64 @@
 
-*{
+/* ---------common or universe selector-------------  */
+*{  
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+
+/* --------------------header style start----------------------- */
+
+.banner_title{
+    text-align: center;
+    margin: 1em 0;    
+}
+.banner{
+    width: 80%;
+    background-color: rgba(28, 25, 30, 0.963);
+    color: whitesmoke;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 4em;
+}
+
+.banner_text{
+    width: 50%;
+}
+
+.banner_text > h2{
+    width: 531px;
+    height: 240px;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 80px;
+}
+
+.banner_text > p{
+    width: 506px;
+    height: 78px;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+#banner_btn{
+    padding: 8px 25px;
+    background-image: linear-gradient(#da9517, #ce4931);
+    color: whitesmoke;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.banner_image{
+    width: 50%; 
+}
+
+.banner_image > img{
+    width: 90%;
+    height: 50%;
+}
+
+/* ---------------------header style end---------------------------------- */
