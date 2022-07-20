@@ -246,6 +246,9 @@
     height: 58vh;
 }
 
+.footer{
+    height: 400px;
+}
 .footer_info{
     flex-direction: column;
 
