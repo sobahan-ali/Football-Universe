@@ -22,26 +22,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 4em;
+    padding: 1.5em 0 0 4em ;
+    border-radius: 20px;
 }
 
 .banner_text{
     width: 50%;
 }
 
-.banner_text > h2{
-    width: 531px;
-    height: 240px;
-    font-weight: 700;
-    font-size: 70px;
-    line-height: 80px;
-}
 
 .banner_text > p{
-    width: 506px;
-    height: 78px;
     font-size: 16px;
-    line-height: 26px;
+    
 }
 
 #banner_btn{
@@ -49,7 +41,7 @@
     background-image: linear-gradient(#da9517, #ce4931);
     color: whitesmoke;
     border-radius: 5px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .banner_image{
@@ -57,28 +49,149 @@
 }
 
 .banner_image > img{
-    width: 90%;
-    height: 50%;
+    width: 60%;
+    height: 20%;
 }
 
 /* ---------------------header style end---------------------------------- */
 
+/* ---------------players container style start---------------------------- */
+    /* side navigation start */
+.container{
+    display: flex;
+    width: 80%;
+    height: 100%;
+    gap: 20px;
+    margin: 0 auto;
+    margin-top: 3em;
+    margin-bottom: 20px;
+
+}
+
+#side_navber{
+    min-width: 300px;
+    height: 220px;
+    background-color: #161616;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+    padding-top: 1.5em; 
+}
+
+.left_nav a{
+    text-decoration: none;
+    background: #fff;
+    border-radius: 5px;
+}
+
+
+#matches > a{
+    padding: 10px 20px;
+          
+}
+
+#group > a{          
+    padding: 10px 52px;            
+}
+
+#blog > a{           
+    padding: 10px 72px;
+} 
+
+#matches, #blog, #group, a:hover{
+    background: #DD0000;
+    color: whitesmoke; 
+}
 
 
 
-/* ----------------footer style start---------------------------------  */
+ /* -------------side navigation end -------------------------*/
+
+ /* players style start */
+ .players{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    /* flex-grow: 1; */
+   
+}
+ .player{ 
+    width: 100%;
+    height: 350px;
+    margin-right: 35px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+ }
+
+ .player_image > img{
+    width: 100%;
+ }
+
+ .player_text{
+    padding-left: 20px;
+ }
+
+ .reguler_btn{
+    width: 100px;
+    height: 32px;
+    border-top-color: gray;
+    border-radius: 5px;
+ }
+ .icons{
+    display: flex;
+    gap: 20px;
+    color: #6c5f5f;
+    margin-top: 20px;
+
+ }
+
+ /* players style end */
+
+
+
+/* ---------------players container style end---------------------------- */
+
+
+
+/*---------------------- main style end-------------------------------- */
+
+/* -------------only tablet view button start------------------------- */
+.exclusive_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    display: none; 
+}
+.btn > a{
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #DD0000;
+    color: whitesmoke;
+    border-radius: 5px;
+    text-align: center;
+   
+}
+/* 
+----------------footer style start---------------------------------  */
+
 .footer{
     width: 100%;
-    height: 30vh;
+    height: 350px;
     background-color: #000;
-    margin-top: 50px;
+    margin: 0 auto;
     color: #B9B9B9;
+
 }
 
 .footer_info{
     display: flex;
-    justify-content: space-evenly;
-    padding-top: 40px;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    margin-top: 20px;
     
     
 }
@@ -86,7 +199,7 @@
     display: flex;
     justify-content: center;
     gap: 50px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .social_icon > a{
     text-decoration: none;
@@ -95,3 +208,120 @@
 }
 
 /* ----------------footer style end---------------------------------  */
+
+/* ---------------media query start---------------------- */
+/*----------- responsive mobile phone start--------------------- */
+
+@media screen and (max-width: 576px) {
+ .banner{
+    flex-direction: column;
+    width: 100%;
+ }
+
+ .banner_title{
+    font-size: 25px;
+ }
+
+ .banner_image > img{
+    width: 70%;
+    height: 60%;
+}
+
+#banner_btn{
+    padding: 8px 10px;
+    color: whitesmoke;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.container{
+    flex-direction: column;
+}
+
+.players{
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.player{
+    height: 58vh;
+}
+
+.footer_info{
+    flex-direction: column;
+
+}
+
+
+}
+
+/*-----------responsive mobile phone end--------------------- */
+
+/* ---------responsive use for tablet start---------------- */
+@media only screen and (min-width: 577px) and (max-width: 992px){
+
+    .container{
+        flex-direction: column;
+    }
+    #side_navber{
+        flex-direction: row;
+        justify-content: center;
+        background-color: #f4eded;
+
+    }
+
+    #matches > a{
+       padding: 5px 10px;
+              
+    }
+    
+    #group > a{          
+        padding: 5px 10px;
+
+    }
+    #blog > a{
+        padding: 5px 30px;
+    }
+
+    .players{
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+.exclusive_btn{
+    display: block;
+    align-items: center;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    
+}
+.footer{
+    margin-top: 50px;
+}
+}
+/* ---------responsive use for tablet end---------------- */
+
+/* ------- responsive use for desktop and laptop start ------ */
+
+@media screen and (min-width: 993px) and (max-width: 1312px) {
+    .banner{
+        justify-content: center;
+        align-items: center;
+    }
+    #side_navber{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container{
+        display: flex;
+    }
+
+    .players{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* ------- responsive use for desktop and laptop end ------ */
+
