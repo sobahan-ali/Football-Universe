@@ -320,13 +320,17 @@
 .banner_text h2{
     font-size: 30px;
     line-height: 50px;
+    /* width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: e; */
    
     
 }
 
 .banner_text p{
     white-space: nowrap; 
-    width: 60%; 
+    width: 100%; 
     overflow: hidden;
     text-overflow: ellipsis; 
    
@@ -360,9 +364,9 @@
 
 .exclusive_btn{
     display: block;
-    margin-top: 50px;
     display: flex;
-    margin-top: 50px;
+    /* text-align: center; */
+    margin: 50px auto;
     
 }
 .footer{
@@ -394,3 +398,4 @@
 }
 /* ------- responsive use for desktop and laptop end ------ */
 
+/* */
